@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24T13.32.20",
+  "commit": "795b9d8+dirty",
+  "machine": "AMD Ryzen 9 9950X3D 16-Core Processor, Microsoft Windows NT 10.0.26200.0",
+  "metrics": {
+    "Parse readme-500.md (ms)": 0.215,
+    "Parse readme-500.md (KB alloc)": 268.0,
+    "Render readme-500.md (ms)": 0.632,
+    "Render readme-500.md (KB alloc)": 1024.0,
+    "Parse readme-5k-crlf.md (ms)": 2.713,
+    "Parse readme-5k-crlf.md (KB alloc)": 3661.0,
+    "Render readme-5k-crlf.md (ms)": 9.34,
+    "Render readme-5k-crlf.md (KB alloc)": 11537.0,
+    "Parse readme-5k-rich.md (ms)": 2.596,
+    "Parse readme-5k-rich.md (KB alloc)": 3500.0,
+    "Render readme-5k-rich.md (ms)": 10.445,
+    "Render readme-5k-rich.md (KB alloc)": 12095.0,
+    "Parse readme-5k.md (ms)": 2.742,
+    "Parse readme-5k.md (KB alloc)": 3660.0,
+    "Render readme-5k.md (ms)": 9.771,
+    "Render readme-5k.md (KB alloc)": 11516.0
+  }
+}

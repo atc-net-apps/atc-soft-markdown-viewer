@@ -1,0 +1,3 @@
+- [x] List services that read the old queue
+- [x] Map consumers to owners
+- [ ] Dry-run the consumer swap

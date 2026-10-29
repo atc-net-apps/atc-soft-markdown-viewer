@@ -1,0 +1,1 @@
+BenchmarkSwitcher.FromAssembly(typeof(MarkdownRenderBenchmarks).Assembly).Run(args);

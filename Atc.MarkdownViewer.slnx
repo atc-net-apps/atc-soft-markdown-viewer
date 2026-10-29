@@ -2,4 +2,10 @@
   <Folder Name="/Docs/">
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Src/">
+    <Project Path="src/Atc.MarkdownViewer.Markdown/Atc.MarkdownViewer.Markdown.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="test/Atc.MarkdownViewer.Markdown.Tests/Atc.MarkdownViewer.Markdown.Tests.csproj" />
+  </Folder>
 </Solution>

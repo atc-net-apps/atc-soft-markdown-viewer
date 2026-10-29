@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Variants (plan DEC-001):
+      W1a: dotnet publish -c Release -p:WasdkSelfContained=true   (Windows App SDK bundled)
+      W1b: dotnet publish -c Release -p:WasdkSelfContained=false  (shared Windows App Runtime 2.5)
+      AOT: add -p:PublishAot=true
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>SpikeWinUI</RootNamespace>
+    <AssemblyName>spike-winui</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <UseWinUI>true</UseWinUI>
+    <WindowsPackageType>None</WindowsPackageType>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <Platforms>x64</Platforms>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <WasdkSelfContained Condition="'$(WasdkSelfContained)' == ''">true</WasdkSelfContained>
+    <WindowsAppSDKSelfContained>$(WasdkSelfContained)</WindowsAppSDKSelfContained>
+    <PublishReadyToRun Condition="'$(PublishAot)' != 'true'">true</PublishReadyToRun>
+    <DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2705" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpikeMarkdown\SpikeMarkdown.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\web\**\*" LinkBase="ui" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Local only: benchmarks/ is never committed, so this project is not in Atc.MarkdownViewer.slnx. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <!-- BenchmarkDotNet needs public, non-sealed benchmark classes. -->
+    <NoWarn>$(NoWarn);CA1515;CA1822;MA0048</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.15.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Atc.MarkdownViewer.Markdown\Atc.MarkdownViewer.Markdown.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Atc.MarkdownViewer.Benchmarks.MarkdownRenderBenchmarks-20261024-132737</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.9711/25H2/2025Update/HudsonValley2)
+AMD Ryzen 9 9950X3D 4.30GHz, 1 CPU, 32 logical and 16 physical cores
+.NET SDK 10.0.402
+  [Host]     : .NET 10.0.13 (10.0.13, 10.0.1326.50504), X64 RyuJIT x86-64-v4
+  DefaultJob : .NET 10.0.13 (10.0.13, 10.0.1326.50504), X64 RyuJIT x86-64-v4
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Fixture    </th><th>Mean </th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Parse</td><td>readme-500.md</td><td>214.9 &mu;s</td><td>4.13 &mu;s</td><td>4.59 &mu;s</td><td>5.3711</td><td>2.6855</td><td>-</td><td>267.63 KB</td>
+</tr><tr><td>Render</td><td>readme-500.md</td><td>632.1 &mu;s</td><td>11.30 &mu;s</td><td>15.09 &mu;s</td><td>44.9219</td><td>44.9219</td><td>44.9219</td><td>1024.06 KB</td>
+</tr><tr><td>Parse</td><td>readme-5k-crlf.md</td><td>2,712.6 &mu;s</td><td>53.30 &mu;s</td><td>57.03 &mu;s</td><td>74.2188</td><td>66.4063</td><td>-</td><td>3660.98 KB</td>
+</tr><tr><td>Render</td><td>readme-5k-crlf.md</td><td>9,339.6 &mu;s</td><td>208.05 &mu;s</td><td>613.44 &mu;s</td><td>453.1250</td><td>421.8750</td><td>250.0000</td><td>11536.51 KB</td>
+</tr><tr><td>Parse</td><td>readme-5k-rich.md</td><td>2,595.7 &mu;s</td><td>44.07 &mu;s</td><td>39.07 &mu;s</td><td>70.3125</td><td>39.0625</td><td>-</td><td>3500.45 KB</td>
+</tr><tr><td>Render</td><td>readme-5k-rich.md</td><td>10,444.9 &mu;s</td><td>188.63 &mu;s</td><td>288.06 &mu;s</td><td>468.7500</td><td>453.1250</td><td>250.0000</td><td>12094.65 KB</td>
+</tr><tr><td>Parse</td><td>readme-5k.md</td><td>2,742.5 &mu;s</td><td>51.88 &mu;s</td><td>53.28 &mu;s</td><td>74.2188</td><td>66.4063</td><td>-</td><td>3660.43 KB</td>
+</tr><tr><td>Render</td><td>readme-5k.md</td><td>9,771.2 &mu;s</td><td>209.91 &mu;s</td><td>608.98 &mu;s</td><td>453.1250</td><td>437.5000</td><td>250.0000</td><td>11516.2 KB</td>
+</tr></tbody></table>
+</body>
+</html>

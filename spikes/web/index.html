@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:">
+  <title>spike</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { margin: 0; font: 16px/1.6 "Segoe UI", system-ui, sans-serif; background: Canvas; color: CanvasText; }
+    #titlebar { height: 32px; app-region: drag; background: color-mix(in srgb, CanvasText 6%, Canvas); display: flex; align-items: center; padding-left: 12px; font-size: 12px; }
+    #doc { max-width: 860px; margin: 0 auto; padding: 24px 32px; }
+    pre { background: color-mix(in srgb, CanvasText 6%, Canvas); padding: 12px; overflow-x: auto; }
+    table { border-collapse: collapse; } td, th { border: 1px solid color-mix(in srgb, CanvasText 20%, Canvas); padding: 4px 8px; }
+  </style>
+</head>
+<body>
+  <div id="titlebar">spike — drag me</div>
+  <article id="doc"></article>
+  <script src="main.js"></script>
+</body>
+</html>

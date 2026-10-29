@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:">
+  <title>spike edit</title>
+  <style>
+    body { margin: 0; display: grid; grid-template-columns: 1fr 1fr; height: 100vh; font: 14px/1.5 "Segoe UI", system-ui, sans-serif; }
+    textarea { font: 13px/1.5 "Cascadia Mono", Consolas, monospace; border: 0; border-right: 1px solid #8884; padding: 12px; resize: none; }
+    #doc { overflow: auto; padding: 12px 24px; }
+  </style>
+</head>
+<body>
+  <textarea id="src" spellcheck="false"></textarea>
+  <article id="doc"></article>
+  <script src="edit.js"></script>
+</body>
+</html>
